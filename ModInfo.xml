@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <Name value="Miku_GentleBullets"/>
+  <DisplayName value="Miku - Gentle Bullet Block Damage"/>
+  <Description value="Reduces ordinary firearm block hits to the engine minimum, normally 1 HP per impact. Enemy damage, tools and explosions are unchanged."/>
+  <Author value="Miku"/>
+  <Version value="1.0.0"/>
+</xml>
