@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+  <!--Reduce hitscan bullet block damage to the engine minimum (normally 1 HP per impact/pellet). DamageBonus is used only in the block-hit branch of ItemActionAttack.Hit in 3.2. Does not modify EntityDamage, explosions, launchers, melee or gas-powered tools. Loaded last; inherited guns receive their base action properties.-->
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]][not(property[@class='DamageBonus'])]">
+    <property class="DamageBonus" />
+  </append>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='cloth'])]">
+    <property name="cloth" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='cloth']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='earth'])]">
+    <property name="earth" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='earth']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='glass'])]">
+    <property name="glass" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='glass']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='metal'])]">
+    <property name="metal" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='metal']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='organic'])]">
+    <property name="organic" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='organic']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='stone'])]">
+    <property name="stone" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='stone']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='water'])]">
+    <property name="water" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='water']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='wood'])]">
+    <property name="wood" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='wood']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='concrete'])]">
+    <property name="concrete" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='concrete']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='boulder'])]">
+    <property name="boulder" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='boulder']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='snow'])]">
+    <property name="snow" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='snow']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='plants'])]">
+    <property name="plants" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='plants']/@value">0</set>
+  <append xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus'][not(property[@name='leaves'])]">
+    <property name="leaves" value="0" />
+  </append>
+  <set xpath="/items/item[not(property[@name='Tags' and contains(concat(',',@value,','),',admin,')])]/property[starts-with(@class,'Action')][property[@name='Class' and @value='Ranged']][property[@name='Magazine_items' and string-length(@value)&gt;0 and not(contains(@value,'ammoGasCan'))]]/property[@class='DamageBonus']/property[@name='leaves']/@value">0</set>
+</configs>
